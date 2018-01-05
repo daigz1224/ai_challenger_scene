@@ -190,7 +190,9 @@ def resnet365(opt):
 ## 附录1：运行流程
 
 ```shell
+## 映射 jupyter notebook 的 8888 端口
 ssh -i "aws_oregon.pem" -L8888:localhost:8888 ubuntu@ec2-54-190-13-238.us-west-2.compute.amazonaws.com
+## 映射 visdom 的 8097 端口
 ssh -i "aws_oregon.pem" -L8097:localhost:8097 ubuntu@ec2-54-190-13-238.us-west-2.compute.amazonaws.com
 ```
 
@@ -202,6 +204,14 @@ ssh -i "aws_oregon.pem" -L8097:localhost:8097 ubuntu@ec2-54-190-13-238.us-west-2
 6. 新建 data 文件夹，上传数据集
 7. 新建 checkpoints 文件夹保存模型
 8. 修改 utils.py 中文件的路径
+
+>  关于 Visdom：
+>
+> 启用 Visdom 时会以为被墙，加上终端没有走sock5翻墙，会导致 connection timed out。
+>
+> 将react-grid-layout.min.js 和 plotly-plotly.min.js这两个文件下载下来放到 .../visdom/static/js/ 中。通过百度云下载：
+>
+> 链接: https://pan.baidu.com/s/1bo25jrD  密码: 8uct
 
 ## 附录2：各个程序文件的作用
 
