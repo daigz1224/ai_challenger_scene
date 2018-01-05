@@ -21,7 +21,6 @@
         "image_id":"7b6a2330a23849fb2bace54084ae9cc73b3049d3.jpg",
         "label_id": 11
     },
-    ...
 ]
 ```
 
@@ -41,7 +40,6 @@
         "image_id":"b5a9a726c9d752d8ac1c722182512d33e66a6f88.jpg",
         "label_id": [6,33,35]
     },
-    ...
 ]
 ```
 
