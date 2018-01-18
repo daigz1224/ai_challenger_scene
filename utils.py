@@ -18,7 +18,7 @@ class Visualizer():
     def plot(self, name, y):
         x = self.index.get(name, 0)
         self.vis.line(Y=np.array([y]), X=np.array([x]),
-                      win=unicode(name),
+                      win=str(name),
                       opts=dict(title=name),
                       update=None if x == 0 else 'append'
                       )
@@ -38,7 +38,7 @@ class Config:
     # test_dir = '/data/image/ai_cha/scene/sl/testa'
     # val_dir = '/data/image/ai_cha/scene/sl/val'
     # meta_path = '/data/image/ai_cha/scene/sl/scene.pth'
-    train_dir = '/data/ai_challenger_scene_train_20170904/scene_train_images_20170904'
+    train_dir = 'data/ai_challenger_scene_train_20170904/scene_train_images_20170904'
     test_dir = 'data/ai_challenger_scene_test_a_20170922/scene_test_a_images_20170922'
     val_dir = 'data/ai_challenger_scene_validation_20170908/scene_validation_images_20170908'
     meta_path = 'scene.pth'
@@ -47,7 +47,7 @@ class Config:
     lr1 = 0
     lr2 = 0.0005
     lr_decay = 0.5
-    batch_size = 128 
+    batch_size = 64 
     max_epoch = 100  
     debug_file = '/tmp/debugc'
     shuffle = True

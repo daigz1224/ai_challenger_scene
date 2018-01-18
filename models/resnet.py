@@ -40,6 +40,6 @@ def resnet152(opt):
     return ResNet(model,opt,name='res152')
 
 def resnet365(opt):
-    model = t.load('checkpoints/whole_resnet50_places365.pth.tar')
+    model = t.load('checkpoints/whole_resnet50_places365_python36.pth.tar')
     # model = tv.models.resnet50()
     return ResNet(model,opt,name='res_365')
